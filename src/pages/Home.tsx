@@ -6,33 +6,33 @@ export function Home() {
   return (
     <div className="bg-background">
       {/* Hero — Premium Apple Style */}
-      <section className="surface-dark relative overflow-hidden min-h-[90vh] flex items-center">
+      <section className="surface-dark relative overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
-        <div className="container-apple py-24 text-center sm:py-32 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-semibold mb-6 animate-fade-in">
+        <div className="container-apple py-20 text-center sm:py-32 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-semibold mb-6 animate-fade-in mx-auto">
             <Sparkles size={14} className="text-white" />
             <span>Available for new opportunities</span>
           </div>
-          <h1 className="animate-fade-up delay-100 text-balance text-6xl font-bold tracking-tight sm:text-8xl bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+          <h1 className="animate-fade-up delay-100 text-balance text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent px-4">
             Akash M.
           </h1>
-          <p className="animate-fade-up delay-200 mx-auto mt-6 max-w-2xl text-balance text-xl text-white/80 sm:text-3xl font-light">
+          <p className="animate-fade-up delay-200 mx-auto mt-6 max-w-2xl text-balance text-lg text-white/80 sm:text-2xl md:text-3xl font-light px-4">
             Crafting the future with <span className="text-white font-medium">Python &amp; Full Stack</span> engineering.
             <br />
-            <span className="text-white/50 text-lg sm:text-xl">Elegant code. Scalable systems. Seamless experiences.</span>
+            <span className="text-white/50 text-base sm:text-lg md:text-xl">Elegant code. Scalable systems. Seamless experiences.</span>
           </p>
-          <div className="animate-fade-up delay-300 mt-10 flex items-center justify-center gap-6 flex-wrap">
-            <Link to="/projects" className="btn-pill btn-primary px-8">View Projects</Link>
-            <Link to="/contact" className="btn-ghost text-[15px] font-medium border border-white/10 rounded-full group">
-              Get in touch <span className="group-hover:translate-x-1 transition-transform inline-block">&rsaquo;</span>
+          <div className="animate-fade-up delay-300 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
+            <Link to="/projects" className="btn-pill btn-primary px-8 w-full sm:w-auto">View Projects</Link>
+            <Link to="/contact" className="btn-ghost text-[15px] font-medium border border-white/10 rounded-full group py-2 px-6">
+              Get in touch <span className="group-hover:translate-x-1 transition-transform inline-block ml-1">&rsaquo;</span>
             </Link>
           </div>
 
           {/* Monogram tile with float animation */}
-          <div className="animate-fade-up delay-500 mt-20 flex justify-center">
-            <div className="animate-float relative">
+          <div className="animate-fade-up delay-500 mt-16 sm:mt-20 flex justify-center">
+            <div className="animate-float relative px-4">
               <div className="absolute -inset-4 bg-primary/20 blur-3xl rounded-full" />
-              <div className="grid h-40 w-40 place-items-center rounded-[2.5rem] bg-white/5 text-6xl font-semibold tracking-tight ring-1 ring-white/20 backdrop-blur-md shadow-2xl overflow-hidden">
+              <div className="grid h-32 w-32 sm:h-40 sm:w-40 place-items-center rounded-[2rem] sm:rounded-[2.5rem] bg-white/5 text-6xl font-semibold tracking-tight ring-1 ring-white/20 backdrop-blur-md shadow-2xl overflow-hidden">
                 <img src={akash} alt="Akash M" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               </div>
             </div>
@@ -41,13 +41,13 @@ export function Home() {
       </section>
 
       {/* Tech Arsenal — Responsive Grid */}
-      <section className="py-24 container-apple">
-        <div className="flex flex-col items-center mb-16 text-center">
+      <section className="py-20 sm:py-24 container-apple">
+        <div className="flex flex-col items-center mb-12 sm:mb-16 text-center">
           <p className="text-primary font-semibold tracking-widest uppercase text-xs mb-3">Expertise</p>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Tech Arsenal</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">Tech Arsenal</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <SkillCard 
             icon={<Code2 className="text-primary" />}
             title="Frontend"
@@ -67,17 +67,17 @@ export function Home() {
       </section>
 
       {/* Featured Projects Selection */}
-      <section className="bg-secondary py-24">
+      <section className="bg-secondary/50 py-20 sm:py-24">
         <div className="container-apple">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end mb-10 sm:mb-12 text-center sm:text-left gap-4">
             <div>
               <p className="text-primary font-semibold tracking-widest uppercase text-xs mb-3">Portfolio Highlights</p>
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Selected Work</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">Selected Work</h2>
             </div>
             <Link to="/projects" className="hidden sm:block apple-link font-medium">Browse All Projects &rsaquo;</Link>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             <FeatureTile
               eyebrow="AI-Integrated"
               title="Expense Detector"
@@ -95,23 +95,23 @@ export function Home() {
             />
           </div>
           
-          <div className="mt-12 text-center sm:hidden">
+          <div className="mt-10 text-center sm:hidden px-4">
             <Link to="/projects" className="apple-link font-medium">Browse All Projects &rsaquo;</Link>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 container-apple">
-        <div className="surface-dark rounded-[3rem] p-12 text-center relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 p-8 opacity-10">
+      <section className="py-20 sm:py-24 container-apple">
+        <div className="surface-dark rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-12 md:p-16 text-center relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 p-8 opacity-10 hidden sm:block">
             <Mail size={120} />
           </div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-5xl mb-6">Let's build something <br className="sm:hidden" /> remarkable together.</h2>
-          <p className="text-white/60 text-lg mb-10 max-w-xl mx-auto">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6 relative z-10">Let's build something <br className="sm:hidden" /> remarkable together.</h2>
+          <p className="text-white/60 text-base sm:text-lg mb-10 max-w-xl mx-auto relative z-10">
             Currently accepting new projects and job opportunities. If you have a vision, let's make it a reality.
           </p>
-          <Link to="/contact" className="btn-pill btn-primary px-12 py-4 animate-glow">
+          <Link to="/contact" className="btn-pill btn-primary px-10 py-3 sm:px-12 sm:py-4 animate-glow relative z-10 inline-block w-full sm:w-auto">
             Say Hello
           </Link>
         </div>
